@@ -1,8 +1,7 @@
 <?php 
 
 require_once  __DIR__ . '/app/server.php' ;
-
-var_dump($discs);
+ 
 
 ?>
 
@@ -24,21 +23,20 @@ var_dump($discs);
                 <img src="img/logo.png" alt="logo" />
             </div>
         </header>
-        <div class="select-container">
-            <select v-model="selectGenre" name="" id="">
-                <option disabled value="">Please select one</option>
-                <option value="all">ALL</option>
-                <option v-for="genre in arrayGenre" :value="genre">{{genre}}</option>                
-            </select>
-        </div>
         <div class="cds-container container">
             <!-- Disco ad esempio -->
-            <div>
-                <img src="disc.poster" alt="">
-                <h3></h3>
-                <span class="author"></span>
-                <span class="year"></span>
+            <?php 
+                foreach ($discs as $key => $disc) {
+                    # code...
+                
+            ?>
+            <div class="cd">
+                <img src="<?php echo $disc['poster'] ?>" alt="">
+                <h3><?php echo $disc['title'] ?></h3>
+                <span class="author"><?php echo $disc['author']?></span>
+                <span class="year"><?php echo $disc['year']?></span>
             </div>
+            <?php  }?>
         </div>
     </div>
 
