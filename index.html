@@ -17,7 +17,11 @@
             </div>
         </header>
         <div class="select-container">
-            
+            <select v-model="selectGenre" name="" id="" @change="filterForGenre">
+                <option disabled value="">Please select one</option>
+                <option selected ="selected" value="all">ALL</option>
+                <option v-for="genre in arrayGenre" :value="genre">{{genre}}</option>                
+            </select>
         </div>
         <div class="cds-container container">
             <!-- Disco ad esempio -->
