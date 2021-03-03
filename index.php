@@ -42,7 +42,7 @@ require_once  __DIR__ . '/app/server.php' ;
 
 
 
-    <script src="js/main.js" charset="utf-8"></script>
+    <script src="js/script.js" charset="utf-8"></script>
 </body>
 
 </html>
