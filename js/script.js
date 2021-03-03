@@ -10,12 +10,11 @@ var app = new Vue({
     },
     mounted() {
         const self = this;
-        axios.get('https://flynn.boolean.careers/exercises/api/array/music')
+        axios.get('http://localhost:8888/php-ajax-dischi/app/server.php')
             .then(function(resp) {
-                console.log('discs ', resp);
-                const disc = resp;
-                self.discs = disc;
-                
+                console.log('discs ', resp.data);
+                const disc = resp.data;
+                self.discs = disc;                
             });
 
 

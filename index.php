@@ -27,8 +27,6 @@ require_once  __DIR__ . '/app/server.php' ;
             <!-- Disco ad esempio -->
             <?php 
                 foreach ($discs as $key => $disc) {
-                    # code...
-                
             ?>
             <div class="cd">
                 <img src="<?php echo $disc['poster'] ?>" alt="">
@@ -36,13 +34,9 @@ require_once  __DIR__ . '/app/server.php' ;
                 <span class="author"><?php echo $disc['author']?></span>
                 <span class="year"><?php echo $disc['year']?></span>
             </div>
-            <?php  }?>
+            <?php  } ?>
         </div>
     </div>
-
-
-
-    <script src="js/script.js" charset="utf-8"></script>
 </body>
 
 </html>
