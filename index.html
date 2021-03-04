@@ -20,9 +20,10 @@
             <select v-model="selectGenre"  name="" id="" @change="filterForGenre">
                 <option disabled value="">Please select one</option>
                 <option selected ="selected" value="all">ALL</option>
-                <option v-for="genre in arrayGenre" :value="genre">{{genre}}</option>                
+                <option v-for="genre in arrayGenre" :value="genre">{{genre}}</option>
+                <option value="error">test error</option>                
             </select>
-            <div v-if="errorFlag" class="">BAD REQUEST</div>
+            <div v-if="errorFlag" class="error">BAD REQUEST</div>
         </div>
         <div class="cds-container container">
             <!-- Disco ad esempio -->
