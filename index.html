@@ -6,22 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css">
     <title>Document</title>
 </head>
 <body>
     <div id="root" class="container">
         <header>
-            <div class="container">
+            <div class="nav-container">
                 <img src="img/logo.png" alt="logo" />
             </div>
         </header>
         <div class="select-container">
-            <select v-model="selectGenre" name="" id="" @change="filterForGenre">
+            <select v-model="selectGenre"  name="" id="" @change="filterForGenre">
                 <option disabled value="">Please select one</option>
                 <option selected ="selected" value="all">ALL</option>
                 <option v-for="genre in arrayGenre" :value="genre">{{genre}}</option>                
             </select>
+            <div v-if="errorFlag" class="">BAD REQUEST</div>
         </div>
         <div class="cds-container container">
             <!-- Disco ad esempio -->

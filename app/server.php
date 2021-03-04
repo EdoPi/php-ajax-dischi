@@ -17,8 +17,8 @@ if (array_key_exists ( 'genre' , $_GET ) && !empty($_GET['genre'])) {
      exit();
  }
  header('Content-Type: application/json');
- $jason = json_encode($discs);
- echo $jason;
+ $json = json_encode($discs);
+ echo $json;
 
 
 

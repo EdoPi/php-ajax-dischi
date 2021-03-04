@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/EdoPi/php-ajax-dischi#readme",
   "devDependencies": {
-    "laravel-mix": "^6.0.13"
+    "laravel-mix": "^6.0.13",
+    "postcss": "^8.2.7",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.1.1"
   }
 }
